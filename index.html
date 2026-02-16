@@ -345,136 +345,104 @@
             </section>
 
 
-			<!-- One -->
+            <!-- One -->
             <section id="one" class="wrapper style1 fade-up">
                 <div class="inner">
                     <h2>Research Highlights</h2>
 
-                    <p>
-                        My research sits at the intersection of <strong>stellar populations, statistical inference, and
-                        computational astrophysics</strong>, with a growing focus on how carefully modeled stellar data can
-                        inform our understanding of galaxy formation and the underlying gravitational potential.
-                        I am particularly motivated by research that bridges <em>observations, modeling, and physical
-                        interpretation</em>, in the spirit of modern data-driven dynamical studies.
-                    </p>
 
                     <div class="features">
 
-                        <!-- Stellar Populations & Galactic Structure -->
+                        <!-- Master's Thesis -->
                         <section>
-                            <h3>Stellar Populations as Galactic Probes</h3>
+                            <h3>Bayesian Distance Calibration with Type-II Cepheids</h3>
                             <p>
-                                My work has primarily focused on <strong>variable stars</strong>—Classical Cepheids,
-                                Type-II Cepheids, and RR Lyrae—as precision tracers of Galactic structure, chemical
-                                enrichment, and the distance scale. I have used these populations to study both the
-                                Milky Way and nearby galaxies, with an emphasis on understanding how stellar populations
-                                encode the assembly history of galaxies.
+                                During my M.Sc. at Heidelberg University, I investigated the use of
+                                <strong>Type-II Cepheids as extragalactic standard candles</strong>.
+                                I developed robust Bayesian regression frameworks to calibrate
+                                Period–Luminosity and Period–Wesenheit relations in the LMC and M31,
+                                explicitly accounting for heteroscedastic uncertainties and contamination.
                             </p>
+                            
 
                             <p>
-                                This includes computational studies of RR Lyrae stars to probe early Galactic chemical
-                                enrichment, as well as Bayesian calibration of Period–Luminosity and Period–Wesenheit
-                                relations for Type-II Cepheids in the LMC and M31.
+                                Rather than relying on ordinary least squares, I emphasized
+                                uncertainty propagation, posterior validation, and statistical consistency checks.
+                                This work demonstrated that Type-II Cepheids can serve as reliable
+                                Population-II distance indicators in galaxies lacking young stellar populations,
+                                with direct relevance for JWST- and LSST-era observations.
                             </p>
 
-                            <ul class="actions">
-                                <li><a href="#three" class="button small">Read more</a></li>
-                            </ul>
+                            <a href="https://arxiv.org/abs/2510.23220" target="_blank" class="button scrolly">
+                                arXiv preprint
+                            </a>
+                            
                         </section>
 
-                        <!-- Astrostatistics & Probabilistic Modeling -->
+                        <!-- Research Assistant Work -->
                         <section>
-                            <h3>Astrostatistics & Probabilistic Inference</h3>
+                            <h3>NLTE Spectral Modeling & Chemical Evolution</h3>
                             <p>
-                                A central theme of my work is the use of <strong>probabilistic modeling and uncertainty
-                                quantification</strong> to extract physically meaningful conclusions from noisy,
-                                heterogeneous astronomical data. I have developed robust Bayesian regression frameworks
-                                that explicitly account for outliers, heteroscedastic uncertainties, and model validation
-                                beyond ordinary least-squares approaches.
+                                As a Research Assistant at the University of Rome Tor Vergata and INAF-OAR,
+                                I conducted high-resolution spectroscopic studies of Galactic
+                                <strong>RR Lyrae stars</strong> to probe early Milky Way chemical enrichment.
                             </p>
 
                             <p>
-                                My research emphasizes statistical honesty: carefully propagating uncertainties,
-                                testing model assumptions, and ensuring that inferred parameters remain physically
-                                interpretable.
+                                I designed and implemented automated, reproducible Python pipelines for
+                                multi-instrument spectroscopic datasets and developed a wrapper for
+                                <strong>physically constrained NLTE synthetic spectral modeling</strong>.
+                                I also applied Non-negative Matrix Factorization (NMF) to decompose
+                                stellar spectra into interpretable components, separating continuum structure,
+                                line features, and noise-dominated modes.
                             </p>
+                      
 
-                            <ul class="actions">
-                                <li><a href="#three" class="button small">Read more</a></li>
-                            </ul>
+                            <div class="link-block">
+                                <a href="https://ui.adsabs.harvard.edu/abs/2025VMSAI...1...40P/abstract"
+                                    target="_blank" class="button scrolly">
+                                    NASA ADS
+                                </a>
+                            </div>
+                            
                         </section>
 
-                        <!-- Computational Astrophysics & Spectral Modeling -->
+                        <!-- GNN Streams Project -->
                         <section>
-                            <h3>Computational Astrophysics & Spectral Modeling</h3>
+                            <h3>Physics-Driven Stellar Streams & Graph Neural Networks</h3>
                             <p>
-                                I have extensive experience developing <strong>reproducible, Python-based analysis
-                                pipelines</strong> for large astronomical datasets. This includes automated analysis
-                                of high-resolution spectroscopic data and physically constrained NLTE synthetic
-                                spectral modeling of F-type variable stars.
+                                Motivated by my growing interest in galactic dynamics and dark matter,
+                                I designed a controlled numerical experiment to study whether
+                                <strong>halo geometry emerges as an organizing principle of stellar-stream
+                                phase-space structure</strong>.
                             </p>
 
                             <p>
-                                I have also applied <strong>Non-negative Matrix Factorization (NMF)</strong> to decompose
-                                stellar spectra into physically interpretable components, enabling robust separation
-                                of continuum, spectral features, and noise-dominated structures.
-                            </p>
-
-                            <ul class="actions">
-                                <li><a href="#three" class="button small">Read more</a></li>
-                            </ul>
-                        </section>
-
-                        <!-- Toward Galactic & Extragalactic Dynamics -->
-                        <section>
-                            <h3>Toward Galactic & Extragalactic Dynamics</h3>
-                            <p>
-                                While my formal research experience has been rooted in stellar populations and
-                                astrostatistics, my current scientific trajectory is toward
-                                <strong>Galactic and extragalactic dynamics</strong>. I am particularly interested in how
-                                phase-space structure, orbital evolution, and dynamical modeling of small stellar systems
-                                (such as stellar streams, halos, and satellite galaxies) can be used to constrain the
-                                gravitational potential of galaxies.
+                                I generated a factorial ensemble of globular-cluster streams in spherical,
+                                oblate, and prolate halo potentials while varying progenitor mass.
+                                Each stream was represented as a graph in six-dimensional phase space
+                                and analyzed using a Graph Neural Network (GNN) as a
+                                <em>representation-learning diagnostic</em>, not a predictive model.
                             </p>
 
                             <p>
-                                This direction is motivated by work that combines data-driven modeling with careful
-                                physical interpretation, using stellar dynamics as a window into the otherwise invisible
-                                distribution and role of <strong>dark matter</strong> in shaping galaxy assembly histories.
+                                The central question was:
+                                do streams cluster in embedding space according to halo geometry
+                                rather than progenitor mass?
+                                By framing machine learning as a controlled dynamical experiment,
+                                this project bridges astrophysical theory and modern geometric ML.
                             </p>
 
-                            <ul class="actions">
-                                <li><a href="#three" class="button small">Read more</a></li>
-                            </ul>
+                            <div class="link-block">
+                                <a href="https://github.com/vasupipwala/stellar-halo-graph-learning"
+                                    target="_blank" class="button scrolly">
+                                    GitHub
+                                </a>
+                            </div>
+                            
                         </section>
 
                     </div>
-
-                    <!-- Background & Skills Summary -->
-                    <hr />
-
-                    <h3>Background, Training & Skills</h3>
-
-                    <p>
-                        I hold an <strong>M.Sc. in Physics</strong> from Heidelberg University, with specialization in
-                        Galactic and Extragalactic Astronomy and Cosmology. My master’s thesis focused on using
-                        Type-II Cepheids as extragalactic distance indicators, under the supervision of
-                        Prof. Eva K. Grebel.
-                    </p>
-
-                    <p>
-                        My training also includes observational experience at the NEON Observing School
-                        (Observatoire de Haute-Provence) and a summer research internship at ASTRON, where I worked on
-                        spectro-photometric analysis of extragalactic transients and radio continuum emission in dwarf
-                        galaxies.
-                    </p>
-
-                    <p>
-                        Computationally, I work primarily in <strong>Python</strong> and am experienced with scientific
-                        computing, Bayesian modeling, time-series analysis, and data-driven inference. I regularly use
-                        NumPy, SciPy, pandas, PyMC, Astropy, scikit-learn, and Jupyter, along with standard astronomical
-                        tools such as TOPCAT, DS9, IRAF, and iSpec.
-                    </p>
 
                 </div>
             </section>
