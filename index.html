@@ -1,0 +1,729 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license
+-->
+<html>
+	<head>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+		<title>Vasu Dipakkumar Pipwala</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+		/* ===== Custom Intro Background ===== */
+		#intro {
+			background-image:
+				linear-gradient(
+					rgba(15, 20, 40, 0.4),
+					rgba(15, 20, 40, 0.4)
+				),
+				url("images/Artistic_MW.jpeg");
+			background-size: cover;
+			background-position: left;
+		}
+            
+        #footer {
+            background-image:
+                linear-gradient(
+                    rgba(15, 20, 40, 0.4),
+                    rgba(15, 20, 40, 0.4)
+                ),
+                url("images/Artistic_MW.jpeg");
+            background-size: cover;
+            background-position: left;
+        }
+
+		/* ===== Sidebar Profile ===== */
+		.sidebar-inner {
+			text-align: center;
+		}
+
+		.sidebar-profile {
+            margin-top: -2.5rem;
+            margin-bottom: 2.5rem;
+		}
+
+        .sidebar-profile img {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    object-position: center 100%;
+                    transform: scale(1.4);
+                    border: 2px solid rgba(255, 255, 255, 0.6);
+                    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+                    margin-bottom: 1.5rem;
+                }
+            
+		.sidebar-profile h3 {
+			font-size: 1.1rem;
+			margin: 0;
+		}
+
+		.sidebar-profile p {
+			font-size: 0.8rem;
+			opacity: 0.75;
+			margin: 0;
+		}
+            
+        /* Sidebar name reveal behavior */
+        /* Default hidden state */
+        #sidebar .sidebar-name,
+        #sidebar .sidebar-role {
+            opacity: 0;
+            transform: translateY(-6px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Visible after intro */
+        #sidebar.show-name .sidebar-name,
+        #sidebar.show-name .sidebar-role {
+            opacity: 1;
+            transform: translateY(0);
+        }
+            
+        .sidebar-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5em;   /* increased spacing */
+            margin-top: 0em;
+        }
+            
+        .sidebar-name {
+            font-size: 40px;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            margin-bottom: 0.4em;
+            color: #ffffff;
+            text-align: center;
+        }
+            
+        .sidebar-role {
+            font-size: 28px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.65);
+            text-align: center;
+            line-height: 1.4;
+            margin: 0;
+        }
+            
+        #three .button {
+            margin-bottom: 2em;
+        }
+            
+        .publications li {
+            line-height: 1.6;
+        }
+        .pub-meta {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9em;
+        }
+        .pub-link {
+            font-size: 0.9em;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+        }
+        .pub-link:hover {
+            border-bottom-color: transparent;
+        }
+            
+        /* Intro typography */
+        .intro-inner {
+            text-align: center;
+            color: #ffffff;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        /* Name */
+        .intro-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6em;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.6em;
+        }
+        /* Body text */
+        .intro-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05em;
+            font-weight: 400;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        /* Greeting line */
+        .intro-greeting {
+            font-weight: 500;
+            color: #ffffff;
+            font-size: 1.1em;
+        }
+        /* Button spacing */
+        #intro .actions {
+            margin-top: 2em;
+        }
+            
+        /* Improve readability of talks & outreach */
+        .presentations ul.alt li {
+            line-height: 1.6;
+            padding-bottom: 1.4em;   /* a bit more breathing room */
+        }
+        /* Talk / presentation title */
+        .presentations .item-title {
+            display: block;
+            font-size: 1.05em;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 0.2em;
+        }
+        /* Author + venue metadata */
+        .presentations .pub-meta,
+        .presentations .meta {
+            display: block;
+            font-size: 0.85em;
+            color: rgba(255, 255, 255, 0.65);
+            margin-top: 0.1em;
+        }
+        /* Section headlines inside Presentations */
+        .presentations h3 {
+            font-size: 1.25em;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.8em;
+            padding-bottom: 0.4em;
+            border-bottom: 5px solid rgba(255, 255, 255, 0.25);
+        }
+        /* Add breathing space between Talks & Teaching blocks */
+        .presentations section + section {
+            margin-top: 2.5em;
+        }
+        /* Ensure links sit clearly below each talk */
+        .presentations .link-block {
+            margin-top: 0.5em;
+        }
+        .presentations .pub-link {
+            display: inline-block;      /* forces it onto its own visual line */
+            font-size: 0.85em;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            border-bottom: 3px dotted rgba(255, 255, 255, 0.4);
+        }
+        .presentations .pub-link:hover {
+            border-bottom-color: transparent;
+        }
+            
+        .presentations .features > section {
+            border-left: 5px solid rgba(255, 255, 255, 0.35);
+            position: relative;
+            padding-left: 2.2em;
+        }
+            
+        .presentations .features > section::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10%;
+            height: 80%;
+            width: 5px;
+            background: rgba(255, 255, 255, 0.35);
+        }
+            
+        .contact-bg {
+            position: relative;
+            background-image: url("images/cropped_new_OIG2.gif");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* Dark overlay for readability */
+        .contact-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+        }
+        .contact-overlay {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-gif {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0.1%;
+            transform: translate(-50%, -50%);
+            opacity: 0.25;
+            pointer-events: none;
+        }
+        
+            
+		</style>
+	</head>
+
+	<body class="is-preload">
+        
+        <!-- Sidebar -->
+        <section id="sidebar">
+            <div class="inner sidebar-inner">
+                
+                <div class="sidebar-profile">
+                    <div class="profile-pic">
+                        <img src="images/profile.jpg" alt="Vasu Dipakkumar Pipwala" />
+                    </div>
+
+                    <h3 class="sidebar-name">Vasu Dipakkumar Pipwala</h3>
+                    <p class="sidebar-role">Astrophysics Researcher & Prospective PhD Student</p>
+                </div>
+                
+<!--                <div class="sidebar-profile">-->
+<!--                    <img src="images/my_photo2.jpeg" alt="Vasu Dipakkumar Pipwala" />-->
+<!--                    <h3 class="sidebar-name">-->
+<!--                        Vasu Dipakkumar Pipwala-->
+<!--                    </h3>-->
+<!--                    <p class="sidebar-role">-->
+<!--                        Astrophysics Researcher & Prospective PhD Student-->
+<!--                    </p>-->
+<!--                </div>-->
+
+
+                <nav>
+                    <ul>
+                        <li><a href="#intro">About</a></li>
+                        <li><a href="#one">Research Highlight</a></li>
+                        <li><a href="#two">Presentations, Teaching & Outreach</a></li>
+                        <li><a href="#three">CV & Publications</a></li>
+                        <li><a href="#four">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Social / Academic Links -->
+                <div class="sidebar-icons">
+                    <a href="mailto:vasupipwala085@gmail.com" title="Email">
+                        <i class="icon solid fa-envelope">  </i>
+                    </a>
+                    <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Pipwala%2C%20Vasu%22" target="_blank" title="NASA ADS">
+                        <i class="icon solid fa-globe"> </i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vasu-dipakkumar-pipwala-3659801a0" target="_blank" title="LinkedIn">
+                        <i class="icon brands fa-linkedin"> </i>
+                    </a>
+                    <a href="https://github.com/vasupipwala" target="_blank" title="GitHub">
+                        <i class="icon brands fa-github">   </i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Intro -->
+            <section id="intro" class="wrapper style1 fullscreen fade-up">
+                <div class="inner intro-inner">
+                    <h1 class="intro-name">Vasu Dipakkumar Pipwala</h1>
+
+                    <p class="intro-text" style="font-size: 1.03em">
+                        <span class="intro-greeting">Hi, I’m glad you stopped by — welcome!</span><br /><br />
+
+                        I’m an astrophysics researcher working with observational data, computation, and statistics to understand what stars and stellar systems can tell us about galaxies. My research background is rooted in stellar populations and variable stars (Classical Cepheids, Type-II Cepheids, and RR Lyrae), and their use in studying Galactic structure, chemical enrichment, and the distance scale.
+                        <br /><br />
+
+                        Looking ahead, I am preparing to transition toward Galactic and extragalactic dynamics at the PhD level. I’m especially interested in how phase-space structure, orbital evolution, and dynamical modeling can be used to connect observed stellar systems (such as streams, halos, and satellites) to the underlying gravitational potential, and in turn to constrain the distribution and role of dark matter in shaping the assembly history of galaxies.
+                    </p>
+
+                    <ul class="actions">
+                        <li><a href="#one" class="button scrolly">Explore My Work</a></li>
+                    </ul>
+                </div>
+            </section>
+
+
+			<!-- One -->
+            <section id="one" class="wrapper style1 fade-up">
+                <div class="inner">
+                    <h2>Research Highlights</h2>
+
+                    <p>
+                        My research sits at the intersection of <strong>stellar populations, statistical inference, and
+                        computational astrophysics</strong>, with a growing focus on how carefully modeled stellar data can
+                        inform our understanding of galaxy formation and the underlying gravitational potential.
+                        I am particularly motivated by research that bridges <em>observations, modeling, and physical
+                        interpretation</em>, in the spirit of modern data-driven dynamical studies.
+                    </p>
+
+                    <div class="features">
+
+                        <!-- Stellar Populations & Galactic Structure -->
+                        <section>
+                            <h3>Stellar Populations as Galactic Probes</h3>
+                            <p>
+                                My work has primarily focused on <strong>variable stars</strong>—Classical Cepheids,
+                                Type-II Cepheids, and RR Lyrae—as precision tracers of Galactic structure, chemical
+                                enrichment, and the distance scale. I have used these populations to study both the
+                                Milky Way and nearby galaxies, with an emphasis on understanding how stellar populations
+                                encode the assembly history of galaxies.
+                            </p>
+
+                            <p>
+                                This includes computational studies of RR Lyrae stars to probe early Galactic chemical
+                                enrichment, as well as Bayesian calibration of Period–Luminosity and Period–Wesenheit
+                                relations for Type-II Cepheids in the LMC and M31.
+                            </p>
+
+                            <ul class="actions">
+                                <li><a href="#three" class="button small">Read more</a></li>
+                            </ul>
+                        </section>
+
+                        <!-- Astrostatistics & Probabilistic Modeling -->
+                        <section>
+                            <h3>Astrostatistics & Probabilistic Inference</h3>
+                            <p>
+                                A central theme of my work is the use of <strong>probabilistic modeling and uncertainty
+                                quantification</strong> to extract physically meaningful conclusions from noisy,
+                                heterogeneous astronomical data. I have developed robust Bayesian regression frameworks
+                                that explicitly account for outliers, heteroscedastic uncertainties, and model validation
+                                beyond ordinary least-squares approaches.
+                            </p>
+
+                            <p>
+                                My research emphasizes statistical honesty: carefully propagating uncertainties,
+                                testing model assumptions, and ensuring that inferred parameters remain physically
+                                interpretable.
+                            </p>
+
+                            <ul class="actions">
+                                <li><a href="#three" class="button small">Read more</a></li>
+                            </ul>
+                        </section>
+
+                        <!-- Computational Astrophysics & Spectral Modeling -->
+                        <section>
+                            <h3>Computational Astrophysics & Spectral Modeling</h3>
+                            <p>
+                                I have extensive experience developing <strong>reproducible, Python-based analysis
+                                pipelines</strong> for large astronomical datasets. This includes automated analysis
+                                of high-resolution spectroscopic data and physically constrained NLTE synthetic
+                                spectral modeling of F-type variable stars.
+                            </p>
+
+                            <p>
+                                I have also applied <strong>Non-negative Matrix Factorization (NMF)</strong> to decompose
+                                stellar spectra into physically interpretable components, enabling robust separation
+                                of continuum, spectral features, and noise-dominated structures.
+                            </p>
+
+                            <ul class="actions">
+                                <li><a href="#three" class="button small">Read more</a></li>
+                            </ul>
+                        </section>
+
+                        <!-- Toward Galactic & Extragalactic Dynamics -->
+                        <section>
+                            <h3>Toward Galactic & Extragalactic Dynamics</h3>
+                            <p>
+                                While my formal research experience has been rooted in stellar populations and
+                                astrostatistics, my current scientific trajectory is toward
+                                <strong>Galactic and extragalactic dynamics</strong>. I am particularly interested in how
+                                phase-space structure, orbital evolution, and dynamical modeling of small stellar systems
+                                (such as stellar streams, halos, and satellite galaxies) can be used to constrain the
+                                gravitational potential of galaxies.
+                            </p>
+
+                            <p>
+                                This direction is motivated by work that combines data-driven modeling with careful
+                                physical interpretation, using stellar dynamics as a window into the otherwise invisible
+                                distribution and role of <strong>dark matter</strong> in shaping galaxy assembly histories.
+                            </p>
+
+                            <ul class="actions">
+                                <li><a href="#three" class="button small">Read more</a></li>
+                            </ul>
+                        </section>
+
+                    </div>
+
+                    <!-- Background & Skills Summary -->
+                    <hr />
+
+                    <h3>Background, Training & Skills</h3>
+
+                    <p>
+                        I hold an <strong>M.Sc. in Physics</strong> from Heidelberg University, with specialization in
+                        Galactic and Extragalactic Astronomy and Cosmology. My master’s thesis focused on using
+                        Type-II Cepheids as extragalactic distance indicators, under the supervision of
+                        Prof. Eva K. Grebel.
+                    </p>
+
+                    <p>
+                        My training also includes observational experience at the NEON Observing School
+                        (Observatoire de Haute-Provence) and a summer research internship at ASTRON, where I worked on
+                        spectro-photometric analysis of extragalactic transients and radio continuum emission in dwarf
+                        galaxies.
+                    </p>
+
+                    <p>
+                        Computationally, I work primarily in <strong>Python</strong> and am experienced with scientific
+                        computing, Bayesian modeling, time-series analysis, and data-driven inference. I regularly use
+                        NumPy, SciPy, pandas, PyMC, Astropy, scikit-learn, and Jupyter, along with standard astronomical
+                        tools such as TOPCAT, DS9, IRAF, and iSpec.
+                    </p>
+
+                </div>
+            </section>
+            
+            <!-- Two -->
+            <section id="two" class="wrapper style3 fade-up">
+                <div class="inner">
+                    <h2>Presentations, Teaching & Outreach</h2>
+
+                    <div class="features presentations">
+
+                        <!-- Talks -->
+                        <section>
+                            <h3>Selected Talks & Conference Presentations</h3>
+
+                            <ul class="alt">
+                                <li>
+                                    <em class="item-title">
+                                       - Chemical abundance analysis of Galactic RR Lyrae stars under NLTE
+                                    </em><br />
+
+                                    <strong>Pipwala, V. D.</strong>
+                                    <span class="pub-meta">
+                                        The Milky Way and Andromeda: the odd couple!, Sexten, Italy (2025)
+                                    </span><br />
+
+                                    <div class="link-block">
+                                        <a href="https://ui.adsabs.harvard.edu/abs/2025VMSAI...1...40P/abstract"
+                                            target="_blank" class="button scrolly">
+                                            NASA ADS
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <em class="item-title">
+                                       - Distance to M31: Testing Type-II Cepheids as Standard Candles
+                                    </em><br />
+
+                                    <strong>Pipwala, V. D.</strong><br />
+                                    <span class="pub-meta">
+                                        EAS Annual Meeting, Kraków, Poland (2023)
+                                    </span><br />
+
+                                    <div class="link-block">
+                                        <a href="https://ui.adsabs.harvard.edu/abs/2023eas..conf.2158P/abstract"
+                                           target="_blank" class="button scrolly">
+                                            NASA ADS
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <!-- Teaching & Outreach -->
+                        <section>
+                            <h3>Teaching & Outreach <br /></h3>
+                            <ul class="alt">
+                                <li>
+                                    <strong>Teaching & Lab Supervisor</strong><br />
+                                    <span class="meta">Heidelberg University</span>
+                                </li>
+                                <li>
+                                    <strong>Chair</strong>, Galaxy Evolution Seminar<br />
+                                    <span class="meta">Heidelberg University</span>
+                                </li>
+                                <li>
+                                    <strong>Outreach Volunteer</strong><br />
+                                    <span class="meta">European Researchers’ Night, Rome University</span>
+                                </li>
+                                <li>
+                                    <strong>Outreach Volunteer</strong><br />
+                                    <span class="meta">ISRO Exhibition, Baroda University</span>
+                                </li>
+                            </ul>
+                        </section>
+
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Three -->
+            <section id="three" class="wrapper style2 fade-up">
+                <div class="inner">
+                    <h2>CV & Publications</h2>
+
+                    <!-- CV -->
+                    <p>
+                        <a href="assets/cv/Vasu_Pipwala_CV.pdf" target="_blank" class="button primary">
+                            View CV (PDF)
+                        </a>
+                    </p>
+                    <br />
+
+                    <!-- Publications -->
+                    <h3>Publications & Preprints</h3>
+                    <br />
+                    <ul class="alt publications">
+                        <li>
+                            <em><strong>- On the Use of Field RR Lyrae as Galactic Probes – VIII. Early Formation of the Galactic Spheroid.</strong></em><br />
+                            <strong>Bono, G.</strong> et al.
+                            (including <strong>Pipwala, V. D.</strong>)
+                            <span class="pub-meta">(2026, submitted)</span><br /><br />
+                            <a href="https://ui.adsabs.harvard.edu/abs/2026ApJ...998...86B/abstract" target="_blank" class="button scrolly">
+                                NASA ADS
+                            </a>
+                        </li>
+
+                        <li>
+                            <em><strong>- Using Type-II Cepheids as Extragalactic Standard Candles: Distances to M31.</strong></em><br />
+                            <strong>Pipwala, V. D.</strong>; Lala, H. N.; Lemasle, B.; et al.
+                            <span class="pub-meta">(2026, submitted)</span><br /><br />
+                            <a href="https://arxiv.org/abs/2510.23220" target="_blank" class="button scrolly">
+                                arXiv preprint
+                            </a>
+                        </li>
+
+                        <li>
+                            <em><strong>- Transient Classification Report for 2022-10-10.</strong></em><br />
+                            Covelo-Paz, A.; Ditrani, F.; <strong>Pipwala, V. D.</strong>; Angus, C.
+                            <span class="pub-meta">(2022)</span><br /><br />
+                            <a href="https://ui.adsabs.harvard.edu/abs/2022TNSCR2945....1C/abstract"
+                               target="_blank" class="button scrolly">
+                               NASA ADS
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </section>
+            
+            
+            
+            <!-- Four -->
+            <section id="four" class="wrapper style1 fade-up contact-bg">
+                
+                <img
+                    src="images/cropped_new_OIG2.gif"
+                    alt="Dynamical evolution of stellar systems in a galactic potential"
+                    class="contact-gif"
+                />
+                
+                <div class="inner contact-overlay">
+                    <h2>Contact</h2>
+                    <p>If you'd like to collaborate, discuss research, or connect academically, please reach out !</p>
+
+                    <ul class="contact">
+                        <li>
+                            <a href="mailto:vasupipwala085@gmail.com" class="button">
+                                <i class="icon solid fa-envelope"></i> Email
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ui.adsabs.harvard.edu/search?q=author:%22Pipwala,%20Vasu%22"
+                               target="_blank" class="button">
+                                <i class="icon solid fa-globe"></i> NASA ADS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/vasu-dipakkumar-pipwala-3659801a0"
+                               target="_blank" class="button">
+                                <i class="icon brands fa-linkedin"></i> LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/vasupipwala"
+                               target="_blank" class="button">
+                                <i class="icon brands fa-github"></i> GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper style1:alt">
+			<div class="inner">
+				<ul class="menu" style="color:#ffffff; font-weight: 500;">
+<!--                    <li>The background artwork and galactic dynamics animation were generated with Microsoft Bing AI.</li>-->
+                    <li> The background artwork and galactic dynamics animation were generated with Microsoft Bing AI. <br /><br /> <br /><br /> &copy; Vasu Dipakkumar Pipwala. All rights reserved. <br /><br /> Design : <a href="http://html5up.net" class="button scrolly">HTML5 UP</a></li>
+<!--                    <li></li>-->
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+        
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const intro = document.getElementById("intro");
+            const sidebar = document.getElementById("sidebar");
+
+            if (!intro || !sidebar) return;
+
+            function updateSidebarState() {
+                const introBottom = intro.getBoundingClientRect().bottom;
+
+                if (introBottom <= 60) {
+                    sidebar.classList.add("show-name");
+                } else {
+                    sidebar.classList.remove("show-name");
+                }
+            }
+
+            document.addEventListener("scroll", updateSidebarState);
+            updateSidebarState(); // run once on load
+        });
+        </script>
+        
+<!--        <script>-->
+<!--        document.addEventListener("DOMContentLoaded", () => {-->
+<!--            const video = document.querySelector(".contact-video");-->
+<!--            if (video) {-->
+<!--                video.play().catch(() => {});-->
+<!--            }-->
+<!--        });-->
+<!--        </script>-->
+<!--        -->
+<!--        <script>-->
+<!--        document.addEventListener("DOMContentLoaded", () => {-->
+<!--            const video = document.querySelector(".contact-video");-->
+<!--            if (!video) return;-->
+<!---->
+<!--            video.muted = true;-->
+<!--            video.setAttribute("playsinline", "");-->
+<!--            video.setAttribute("webkit-playsinline", "");-->
+<!---->
+<!--            const tryPlay = () => {-->
+<!--                const p = video.play();-->
+<!--                if (p !== undefined) {-->
+<!--                    p.catch(() => {});-->
+<!--                }-->
+<!--            };-->
+<!---->
+<!--            // Safari sometimes needs a tiny delay-->
+<!--            setTimeout(tryPlay, 150);-->
+<!--        });-->
+<!--        </script>-->
+        
+
+	</body>
+</html>
